@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WWW",
+    "WWW"
+  ],
+  "key": {
+    "W": {
+      "item": "dendromica:eurenite"
+    }
+  },
+  "result": {
+    "item": "dendromica:eurenite_block",
+    "count": 1
+  }
+}
+
