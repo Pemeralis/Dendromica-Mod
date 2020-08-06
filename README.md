@@ -1,4 +1,4 @@
-# Fabric Example Mod
+# Dendromica Mod
 
 ## Setup
 
