@@ -38,6 +38,7 @@ public class Erratica implements ModInitializer {
 							))));
 		}
 	}
+
 	@Override
 	public void onInitialize() {
 		registerBlock("eurenite_ore", EURENITE_ORE);
