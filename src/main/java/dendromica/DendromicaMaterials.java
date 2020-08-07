@@ -7,7 +7,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum DendromicaMaterials implements ToolMaterial {
-    EURENITE(4, 10, 12F, 20F, 50, () -> {
+    EURENITE(4, 10, 2.0F, 20F, 50, () -> {
         return Ingredient.ofItems(DendromicaItems.EURENITE);
     });
     private final int miningLevel;
