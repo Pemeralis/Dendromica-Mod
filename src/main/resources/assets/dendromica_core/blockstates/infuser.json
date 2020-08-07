@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "activated=false": { "model": "dendromica_core:block/infuser_off" },
+    "activated=true": { "model": "dendromica_core:block/infuser_on" }
+  }
+}
+

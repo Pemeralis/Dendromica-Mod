@@ -17,6 +17,7 @@ public class DendromicaCoreItems {
     public static Item EURENITE;
     public static BlockItem EURENITE_ORE;
     public static BlockItem EURENITE_BLOCK;
+    public static BlockItem INFUSER;
 
     static {
         final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
@@ -46,5 +47,13 @@ public class DendromicaCoreItems {
                 new Item.Settings()
                         .group(DENDROMICA));
         EURENITE = new Item(new Item.Settings().group(DENDROMICA));
+        INFUSER = new BlockItem(
+                new Infuser(FabricBlockSettings
+                        .of(Material.STONE)
+                        .hardness(10.0f)
+                        .breakByTool(FabricToolTags.PICKAXES, 3)
+                        .requiresTool()),
+                new Item.Settings()
+                .group(DENDROMICA));
     }
 }
