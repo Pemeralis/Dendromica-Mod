@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "dendromica_core:block/eurenite_ore" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "block.dendromica_core.eurenite_ore": "Eurenite Ore",
+  "block.dendromica_core.eurenite_block": "Eurenite Block",
+  "item.dendromica_core.eurenite": "Eurenite",
+  "item.dendromica_core.eurenite_sword": "Eurenite Sword",
+  "item.dendromica_core.eurenite_axe": "Eurenite Axe",
+  "item.dendromica_core.eurenite_pickaxe": "Eurenite Pickaxe",
+  "item.dendromica_core.eurenite_hoe": "Eurenite Hoe",
+  "item.dendromica_core.eurenite_shovel": "Eurenite Shovel",
+  "itemGroup.dendromica_core.main": "Dendromica Core"
+}

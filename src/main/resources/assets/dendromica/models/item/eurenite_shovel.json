@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "dendromica:item/eurenite_shovel"
-  }
-}

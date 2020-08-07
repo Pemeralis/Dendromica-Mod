@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dendromica_core:eurenite_block"
+    }
+  ],
+  "result": {
+    "item": "dendromica_core:eurenite",
+    "count": 9
+  }
+}
+

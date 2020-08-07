@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "dendromica",
+  "id": "dendromica_core",
   "version": "${version}",
 
   "name": "Dendromica",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "dendromica.Erratica"
+      "dendromica_core.Erratica"
     ]
   },
   "mixins": [

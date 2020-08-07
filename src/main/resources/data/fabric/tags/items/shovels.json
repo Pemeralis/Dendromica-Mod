@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-    "dendromica:eurenite_shovel"
+    "dendromica_core:eurenite_shovel"
   ]
 }
