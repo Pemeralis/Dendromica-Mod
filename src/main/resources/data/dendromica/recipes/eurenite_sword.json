@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " W",
+    " W ",
+    " R "
+  ],
+  "key": {
+    "W": {
+      "item": "dendromica:eurenite"
+    },
+    "R": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dendromica:eurenite_sword",
+    "count": 1
+  }
+}
