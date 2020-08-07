@@ -20,7 +20,7 @@ public class DendromicaItems{
 
     static {
          final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
-                new Identifier("tutorial", "other"))
+                new Identifier("dendromica", "core"))
                 .icon(() -> new ItemStack(EURENITE))
                 .appendItems(stacks -> {
                     stacks.add(new ItemStack(EURENITE_ORE));

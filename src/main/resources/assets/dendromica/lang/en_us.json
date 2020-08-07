@@ -6,5 +6,6 @@
   "item.dendromica.eurenite_axe": "Eurenite Axe",
   "item.dendromica.eurenite_pickaxe": "Eurenite Pickaxe",
   "item.dendromica.eurenite_hoe": "Eurenite Hoe",
-  "item.dendromica.eurenite_shovel": "Eurenite Shovel"
+  "item.dendromica.eurenite_shovel": "Eurenite Shovel",
+  "itemGroup.dendromica.core": "Dendromica Core"
 }
