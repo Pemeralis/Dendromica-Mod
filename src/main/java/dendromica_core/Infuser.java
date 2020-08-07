@@ -23,14 +23,10 @@ public class Infuser extends Block {
     }
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit){
-        if() {
-            world.setBlockState(pos, state.with(ACTIVATED, true));
-            return ActionResult.SUCCESS;
-        }
-        else if() {
+        if(state.get(ACTIVATED))
             world.setBlockState(pos, state.with(ACTIVATED, false));
-            return ActionResult.SUCCESS;
-        }
-        return ActionResult.FAIL;
+        else
+            world.setBlockState(pos, state.with(ACTIVATED, true));
+        return ActionResult.SUCCESS;
     }
 }
