@@ -48,6 +48,7 @@ public class Erratica implements ModInitializer {
 		registerItem("eurenite_sword", EURENITE_SWORD);
 		registerItem("eurenite_hoe", EURENITE_HOE);
 		registerItem("eurenite_shovel", EURENITE_SHOVEL);
+		registerBlockItem("infuser", INFUSER);
 
 		Registry.BIOME.forEach(this::handleBiome);
 		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> handleBiome(biome));
