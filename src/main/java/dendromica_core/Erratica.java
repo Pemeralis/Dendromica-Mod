@@ -1,10 +1,10 @@
 package dendromica_core;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -36,16 +36,20 @@ public class Erratica implements ModInitializer {
 							))));
 		}
 	}
+	public final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
+			new Identifier("dendromica_core", "main"))
+			.icon(() -> new ItemStack(EURENITE))
+			.build();
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_pickaxe"), EURENITE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_axe"), EURENITE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_sword"), EURENITE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_hoe"), EURENITE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_shovel"), EURENITE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite"), EURENITE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_block"), new BlockItem(EURENITE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_ore"), new BlockItem(EURENITE_ORE, new Item.Settings()));
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_ore"), new BlockItem(EURENITE_ORE, new Item.Settings().group(DENDROMICA)));
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite"), EURENITE = new Item(new Item.Settings().group(DENDROMICA)));
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_block"), new BlockItem(EURENITE_BLOCK, new Item.Settings().group(DENDROMICA)));
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_shovel"), EURENITE_SHOVEL = new ShovelItem(DendromicaCoreMaterials.EURENITE, 1.5F, -3.0F, new Item.Settings().group(DENDROMICA)));
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_pickaxe"), EURENITE_PICKAXE = new PickaxeItem(DendromicaCoreMaterials.EURENITE, 2, -2.0F, new Item.Settings().group(DENDROMICA)) {});
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_axe"), EURENITE_AXE = new AxeItem(DendromicaCoreMaterials.EURENITE, 5, -3.3F, new Item.Settings().group(DENDROMICA)) {});
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_hoe"), EURENITE_HOE = new HoeItem(DendromicaCoreMaterials.EURENITE, -20, -2.0F, new Item.Settings().group(DENDROMICA)) {});
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_sword"), EURENITE_SWORD = new SwordItem(DendromicaCoreMaterials.EURENITE, 3, -2.6F, new Item.Settings().group(DENDROMICA)));
 		Registry.register(Registry.BLOCK, new Identifier("dendromica_core", "eurenite_block"), EURENITE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("dendromica_core", "eurenite_ore"), EURENITE_ORE);
 		Registry.BIOME.forEach(this::handleBiome);
