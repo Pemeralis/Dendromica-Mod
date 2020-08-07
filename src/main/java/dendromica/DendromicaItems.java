@@ -17,7 +17,6 @@ public class DendromicaItems{
     public static Item EURENITE;
     public static Block EURENITE_ORE;
     public static Block EURENITE_BLOCK;
-    public static ItemGroup DENDROMICA_GROUP;
 
     static {
          final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
