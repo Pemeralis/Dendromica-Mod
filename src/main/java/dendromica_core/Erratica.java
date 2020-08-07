@@ -6,7 +6,6 @@ import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -27,7 +26,7 @@ public class Erratica implements ModInitializer {
 					Feature.ORE.configure(
 							new OreFeatureConfig(
 									OreFeatureConfig.Target.NATURAL_STONE,
-									EURENITE_ORE.getDefaultState(),
+									EURENITE_ORE.getBlock().getDefaultState(),
 									4 //Ore vein size
 							)).createDecoratedFeature(
 							Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
@@ -41,11 +40,9 @@ public class Erratica implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		registerBlock("eurenite_ore", EURENITE_ORE);
-		registerItem("eurenite_ore", EURENITE_ORE_ITEM);
+		registerBlockItem("eurenite_ore", EURENITE_ORE);
 		registerItem("eurenite", EURENITE);
-		registerBlock("eurenite_block", EURENITE_BLOCK);
-		registerItem("eurenite_block", EURENITE_BLOCk_ITEM);
+		registerBlockItem("eurenite_block", EURENITE_BLOCK);
 		registerItem("eurenite_pickaxe", EURENITE_PICKAXE);
 		registerItem("eurenite_axe", EURENITE_AXE);
 		registerItem("eurenite_sword", EURENITE_SWORD);
@@ -58,6 +55,11 @@ public class Erratica implements ModInitializer {
 
 	private void registerItem(String path, Item item) {
 		Registry.register(Registry.ITEM, new Identifier("dendromica_core", path), item);
+	}
+
+	private void registerBlockItem(String path, BlockItem item) {
+		registerItem(path, item);
+		registerBlock(path, item.getBlock());
 	}
 
 	private void registerBlock(String path, Block block) {
