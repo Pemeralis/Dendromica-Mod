@@ -45,8 +45,8 @@ public class Erratica implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("dendromica","eurenite_hoe"), EURENITE_HOE);
 		Registry.register(Registry.ITEM, new Identifier("dendromica","eurenite_shovel"), EURENITE_SHOVEL);
 		Registry.register(Registry.ITEM, new Identifier("dendromica", "eurenite"), EURENITE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica", "eurenite_block"), new BlockItem(EURENITE_BLOCK, new Item.Settings().group(ItemGroup.MISC)));
-		Registry.register(Registry.ITEM, new Identifier("dendromica", "eurenite_ore"), new BlockItem(EURENITE_ORE, new Item.Settings().group(ItemGroup.MISC)));
+		Registry.register(Registry.ITEM, new Identifier("dendromica", "eurenite_block"), new BlockItem(EURENITE_BLOCK, new Item.Settings()));
+		Registry.register(Registry.ITEM, new Identifier("dendromica", "eurenite_ore"), new BlockItem(EURENITE_ORE, new Item.Settings()));
 		Registry.register(Registry.BLOCK, new Identifier("dendromica", "eurenite_block"), EURENITE_BLOCK);
 		Registry.register(Registry.BLOCK, new Identifier("dendromica", "eurenite_ore"), EURENITE_ORE);
 		Registry.BIOME.forEach(this::handleBiome);
