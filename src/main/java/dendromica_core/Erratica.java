@@ -3,8 +3,10 @@ package dendromica_core;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
@@ -38,17 +40,26 @@ public class Erratica implements ModInitializer {
 	}
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_pickaxe"), EURENITE_PICKAXE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_axe"), EURENITE_AXE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_sword"), EURENITE_SWORD);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_hoe"), EURENITE_HOE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core","eurenite_shovel"), EURENITE_SHOVEL);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite"), EURENITE);
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_block"), new BlockItem(EURENITE_BLOCK, new Item.Settings()));
-		Registry.register(Registry.ITEM, new Identifier("dendromica_core", "eurenite_ore"), new BlockItem(EURENITE_ORE, new Item.Settings()));
-		Registry.register(Registry.BLOCK, new Identifier("dendromica_core", "eurenite_block"), EURENITE_BLOCK);
-		Registry.register(Registry.BLOCK, new Identifier("dendromica_core", "eurenite_ore"), EURENITE_ORE);
+		registerBlock("eurenite_ore", EURENITE_ORE);
+		registerItem("eurenite_ore", EURENITE_ORE_ITEM);
+		registerItem("eurenite", EURENITE);
+		registerBlock("eurenite_block", EURENITE_BLOCK);
+		registerItem("eurenite_block", EURENITE_BLOCk_ITEM);
+		registerItem("eurenite_pickaxe", EURENITE_PICKAXE);
+		registerItem("eurenite_axe", EURENITE_AXE);
+		registerItem("eurenite_sword", EURENITE_SWORD);
+		registerItem("eurenite_hoe", EURENITE_HOE);
+		registerItem("eurenite_shovel", EURENITE_SHOVEL);
+
 		Registry.BIOME.forEach(this::handleBiome);
 		RegistryEntryAddedCallback.event(Registry.BIOME).register((i, identifier, biome) -> handleBiome(biome));
+	}
+
+	private void registerItem(String path, Item item) {
+		Registry.register(Registry.ITEM, new Identifier("dendromica_core", path), item);
+	}
+
+	private void registerBlock(String path, Block block) {
+		Registry.register(Registry.BLOCK, new Identifier("dendromica_core", path), block);
 	}
 }

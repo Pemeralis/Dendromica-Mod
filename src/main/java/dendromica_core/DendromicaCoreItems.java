@@ -16,7 +16,9 @@ public class DendromicaCoreItems {
     public static ToolItem EURENITE_AXE;
     public static Item EURENITE;
     public static Block EURENITE_ORE;
+    public static Item EURENITE_ORE_ITEM;
     public static Block EURENITE_BLOCK;
+    public static Item EURENITE_BLOCk_ITEM;
 
     static {
         final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
@@ -33,19 +35,25 @@ public class DendromicaCoreItems {
                     stacks.add(new ItemStack(EURENITE_SWORD));
                 })
                 .build();
-        EURENITE_SWORD = new SwordItem(DendromicaCoreMaterials.EURENITE, 3, -2.6F, new Item.Settings());
-        EURENITE_SHOVEL = new ShovelItem(DendromicaCoreMaterials.EURENITE, 1.5F, -3.0F, new Item.Settings());
-        EURENITE_PICKAXE = new PickaxeItem(DendromicaCoreMaterials.EURENITE, 2, -2.0F, new Item.Settings()) {};
-        EURENITE_HOE = new HoeItem(DendromicaCoreMaterials.EURENITE, -20, -2.0F, new Item.Settings()) {};
-        EURENITE_AXE = new AxeItem(DendromicaCoreMaterials.EURENITE, 5, -3.3F, new Item.Settings()) {};
-        EURENITE = new Item(new Item.Settings());
+
         EURENITE_ORE = new Block(FabricBlockSettings.of(Material.METAL)
                 .hardness(5.0f)
                 .breakByTool(FabricToolTags.PICKAXES, 3)
                 .requiresTool());
+        EURENITE_ORE_ITEM = new BlockItem(EURENITE_ORE,
+                new Item.Settings().group(ItemGroup.MATERIALS));
         EURENITE_BLOCK = new Block(FabricBlockSettings.of(Material.METAL)
                 .hardness(8.0f)
                 .breakByTool(FabricToolTags.PICKAXES, 3)
                 .requiresTool());
+        EURENITE_BLOCk_ITEM = new BlockItem(EURENITE_BLOCK,
+                new Item.Settings().group(ItemGroup.MATERIALS));
+        EURENITE = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+
+        EURENITE_SWORD = new SwordItem(DendromicaCoreMaterials.EURENITE, 3, -2.6F, new Item.Settings().group(ItemGroup.MATERIALS));
+        EURENITE_SHOVEL = new ShovelItem(DendromicaCoreMaterials.EURENITE, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.MATERIALS));
+        EURENITE_PICKAXE = new PickaxeItem(DendromicaCoreMaterials.EURENITE, 2, -2.0F, new Item.Settings().group(ItemGroup.MATERIALS)) {};
+        EURENITE_HOE = new HoeItem(DendromicaCoreMaterials.EURENITE, -20, -2.0F, new Item.Settings().group(ItemGroup.MATERIALS)) {};
+        EURENITE_AXE = new AxeItem(DendromicaCoreMaterials.EURENITE, 5, -3.3F, new Item.Settings().group(ItemGroup.MATERIALS)) {};
     }
 }
