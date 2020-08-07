@@ -22,16 +22,6 @@ public class DendromicaCoreItems {
         final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
                 new Identifier("dendromica_core", "main"))
                 .icon(() -> new ItemStack(EURENITE))
-                .appendItems(stacks -> {
-                    stacks.add(new ItemStack(EURENITE_ORE));
-                    stacks.add(new ItemStack(EURENITE));
-                    stacks.add(new ItemStack(EURENITE_BLOCK));
-                    stacks.add(new ItemStack(EURENITE_SHOVEL));
-                    stacks.add(new ItemStack(EURENITE_PICKAXE));
-                    stacks.add(new ItemStack(EURENITE_AXE));
-                    stacks.add(new ItemStack(EURENITE_HOE));
-                    stacks.add(new ItemStack(EURENITE_SWORD));
-                })
                 .build();
 
         EURENITE_SWORD = new SwordItem(DendromicaCoreMaterials.EURENITE, 3, -2.6F, new Item.Settings().group(DENDROMICA));
@@ -46,7 +36,7 @@ public class DendromicaCoreItems {
                         .breakByTool(FabricToolTags.PICKAXES, 3)
                         .requiresTool()),
                 new Item.Settings()
-                        .group(ItemGroup.MATERIALS));
+                        .group(DENDROMICA));
         EURENITE_BLOCK = new BlockItem(
                 new Block(FabricBlockSettings
                         .of(Material.METAL)
@@ -54,7 +44,7 @@ public class DendromicaCoreItems {
                         .breakByTool(FabricToolTags.PICKAXES, 3)
                         .requiresTool()),
                 new Item.Settings()
-                        .group(ItemGroup.MATERIALS));
-        EURENITE = new Item(new Item.Settings().group(ItemGroup.MATERIALS));
+                        .group(DENDROMICA));
+        EURENITE = new Item(new Item.Settings().group(DENDROMICA));
     }
 }
