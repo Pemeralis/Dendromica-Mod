@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dendromica_core:items/eurenite_layer_1",
+    "layer1": "dendromica_core:items/eurenite_layer_2"
+  }
+}
