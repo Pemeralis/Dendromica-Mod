@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 
@@ -18,18 +19,25 @@ public class DendromicaCoreItems {
     public static BlockItem EURENITE_ORE;
     public static BlockItem EURENITE_BLOCK;
     public static BlockItem INFUSER;
+    public static Item EURENITE_HELMET;
+    public static Item EURENITE_CHESTPLATE;
+    public static Item EURENITE_LEGGINGS;
+    public static Item EURENITE_BOOTS;
 
     static {
         final ItemGroup DENDROMICA = FabricItemGroupBuilder.create(
                 new Identifier("dendromica_core", "main"))
                 .icon(() -> new ItemStack(EURENITE))
                 .build();
-
         EURENITE_SWORD = new SwordItem(DendromicaCoreMaterials.EURENITE, 3, -2.6F, new Item.Settings().group(DENDROMICA));
         EURENITE_SHOVEL = new ShovelItem(DendromicaCoreMaterials.EURENITE, 1.5F, -3.0F, new Item.Settings().group(DENDROMICA));
         EURENITE_PICKAXE = new PickaxeItem(DendromicaCoreMaterials.EURENITE, 2, -2.0F, new Item.Settings().group(DENDROMICA)) {};
         EURENITE_HOE = new HoeItem(DendromicaCoreMaterials.EURENITE, -20, -2.0F, new Item.Settings().group(DENDROMICA)) {};
         EURENITE_AXE = new AxeItem(DendromicaCoreMaterials.EURENITE, 5, -3.3F, new Item.Settings().group(DENDROMICA)) {};
+        EURENITE_HELMET = new ArmorItem(DendromicaCoreArmorMaterial.EURENITE, EquipmentSlot.HEAD, (new Item.Settings().group(DENDROMICA)));
+        EURENITE_CHESTPLATE = new ArmorItem(DendromicaCoreArmorMaterial.EURENITE, EquipmentSlot.CHEST, (new Item.Settings().group(DENDROMICA)));
+        EURENITE_LEGGINGS = new ArmorItem(DendromicaCoreArmorMaterial.EURENITE, EquipmentSlot.LEGS, (new Item.Settings().group(DENDROMICA)));
+        EURENITE_BOOTS = new ArmorItem(DendromicaCoreArmorMaterial.EURENITE, EquipmentSlot.FEET, (new Item.Settings().group(DENDROMICA)));
         EURENITE_ORE = new BlockItem(
                 new Block(FabricBlockSettings
                         .of(Material.METAL)
