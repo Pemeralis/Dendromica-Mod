@@ -20,6 +20,8 @@
   "entrypoints": {
     "main": [
       "dendromica_core.Erratica"
+    ],
+    "client": [
     ]
   },
   "mixins": [
