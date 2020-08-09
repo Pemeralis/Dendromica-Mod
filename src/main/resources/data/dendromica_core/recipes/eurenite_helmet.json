@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "W W",
+    "   "
+  ],
+  "key": {
+    "W": {
+      "item": "dendromica_core:eurenite"
+    }
+  },
+  "result": {
+    "item": "dendromica_core:eurenite_helmet",
+    "count": 1
+  }
+}

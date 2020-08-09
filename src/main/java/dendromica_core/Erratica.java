@@ -31,7 +31,7 @@ public class Erratica implements ModInitializer {
 									4 //Ore vein size
 							)).createDecoratedFeature(
 							Decorator.COUNT_RANGE.configure(new RangeDecoratorConfig(
-									8, //Number of veins per chunk
+									3, //Number of veins per chunk
 									0, //Bottom Offset
 									0, //Min y level
 									24 //Max y level

@@ -12,7 +12,7 @@ import net.minecraft.util.Lazy;
 import java.util.function.Supplier;
 
 public enum DendromicaCoreArmorMaterial implements ArmorMaterial {
-    EURENITE("eurenite", 1, new int[]{2,4,3,2}, 50, SoundEvents.BLOCK_WOOL_PLACE, 0.0F, 0.0F, () -> {
+    EURENITE("eurenite", 1, new int[]{5,6,5,4}, 50, SoundEvents.BLOCK_WOOL_PLACE, 4.0F, 2.0F, () -> {
         return Ingredient.ofItems(DendromicaCoreItems.EURENITE);
     });
     private static final int[] baseDurability = {13, 15, 16, 11};
