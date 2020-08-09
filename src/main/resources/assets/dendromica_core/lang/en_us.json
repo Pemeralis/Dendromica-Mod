@@ -7,5 +7,10 @@
   "item.dendromica_core.eurenite_pickaxe": "Eurenite Pickaxe",
   "item.dendromica_core.eurenite_hoe": "Eurenite Hoe",
   "item.dendromica_core.eurenite_shovel": "Eurenite Shovel",
-  "itemGroup.dendromica_core.main": "Dendromica Core"
+  "itemGroup.dendromica_core.main": "Dendromica Core",
+  "item.dendromica_core.eurenite_helmet": "Eurenite Helmet",
+  "item.dendromica_core.eurenite_chestplate": "Eurenite Chestplate",
+  "item.dendromica_core.eurenite_leggings": "Eurenite Leggings",
+  "item.dendromica_core.eurenite_boots": "Eurenite Boots",
+  "block.dendromica_core.infuser": "Infuser"
 }
