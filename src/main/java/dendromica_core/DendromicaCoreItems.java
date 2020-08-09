@@ -7,6 +7,9 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 
@@ -56,7 +59,7 @@ public class DendromicaCoreItems {
                         .requiresTool()),
                 new Item.Settings()
                         .group(DENDROMICA));
-        EURENITE = new Item(new Item.Settings().group(DENDROMICA));
+        EURENITE = new Item(new Item.Settings().group(DENDROMICA).food(new FoodComponent.Builder().hunger(0).saturationModifier(2f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE,1, 1),.1f).build()));
         INFUSER = new BlockItem(
                 new Infuser(FabricBlockSettings
                         .of(Material.STONE)
