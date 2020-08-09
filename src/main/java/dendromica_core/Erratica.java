@@ -1,5 +1,6 @@
 package dendromica_core;
 
+import dendromica_core.mixin.client.ArmorFeatureRendererAccessor;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.registry.RegistryEntryAddedCallback;
 
