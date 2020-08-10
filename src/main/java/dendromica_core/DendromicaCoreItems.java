@@ -13,6 +13,8 @@ import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 
+import static net.minecraft.item.Items.BUCKET;
+
 public class DendromicaCoreItems {
     public static ToolItem EURENITE_SWORD;
     public static ToolItem EURENITE_SHOVEL;
@@ -59,7 +61,15 @@ public class DendromicaCoreItems {
                         .requiresTool()),
                 new Item.Settings()
                         .group(DENDROMICA));
-        EURENITE = new Item(new Item.Settings().group(DENDROMICA).food(new FoodComponent.Builder().hunger(8).saturationModifier(12f).alwaysEdible().statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE,1, 2),.2f).build()));
+        EURENITE = new Item(new Item.Settings()
+                .group(DENDROMICA)
+                .food(new FoodComponent
+                        .Builder()
+                        .hunger(8)
+                        .saturationModifier(12f)
+                        .alwaysEdible()
+                        .statusEffect(new StatusEffectInstance(StatusEffects.INSTANT_DAMAGE,1, 2),.2f)
+                        .build()));
         INFUSER = new BlockItem(
                 new Infuser(FabricBlockSettings
                         .of(Material.STONE)
